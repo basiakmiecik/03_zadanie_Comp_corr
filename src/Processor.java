@@ -3,10 +3,14 @@ public class Processor {
     String model;
     double clocking;
 
-    public Processor(String producent, String model, double clocking) {
+    public Processor(String producent, double clocking) {
         this.producent = producent;
-        this.model = model;
         this.clocking = clocking;
+    }
+
+    public Processor(String producent, String model, double clocking) {
+        this(producent, clocking);
+        this.model = model;
     }
 
     public String getProducent() {

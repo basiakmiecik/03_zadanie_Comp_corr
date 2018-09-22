@@ -4,11 +4,16 @@ public class Memory {
     int count;
     double clocking;
 
-    public Memory(String producent, String model, int count, double clocking) {
+    public Memory(String producent, int count, double clocking) {
         this.producent = producent;
-        this.model = model;
         this.count = count;
         this.clocking = clocking;
+    }
+
+    public Memory(String producent, String model, int count, double clocking) {
+       this(producent, count,clocking);
+        this.model = model;
+
     }
 
     public String getProducent() {
